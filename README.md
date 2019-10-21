@@ -9,6 +9,12 @@
 2. 关闭所有服务后再访问 http://localhost:8504/add ，页面显示：error
 3. 参考：http://blog.didispace.com/springcloud3/
 
+### 步骤四：引入 Hystrix Dashboard
+1. 引入依赖 spring-boot-starter-actuator、spring-cloud-starter-netflix-hystrix-dashboard
+2. src/main/resources/application.properties 中：1.配置 Actuator 监控；2.注释行`spring.cloud.consul.discovery.register=false
+`，让应用注册到 consul
+3. 启动类添加注解：@EnableHystrixDashboard
+
 ### 参考
 参考资料 | 网址
 --- | ---
